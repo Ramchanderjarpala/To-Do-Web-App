@@ -53,7 +53,7 @@ export default function TaskItem({ task, onToggleComplete, onEdit, onDelete, onT
                     </button>
                 </div>
             </div>
-            <div className="flex justify-between text-sm text-muted">
+            <div className="flex justify-between text-xs text-muted">
                 <span className={`font-semibold px-2 py-1 rounded-md cursor-default select-none ${task.priority === 'high' ? 'text-red-400 bg-red-900/30 hover:bg-red-900/50' :
                     task.priority === 'medium' ? 'text-yellow-400 bg-yellow-900/30 hover:bg-yellow-900/50' :
                         task.priority === 'low' ? 'text-green-400 bg-green-900/30 hover:bg-green-900/50' :
