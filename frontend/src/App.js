@@ -125,7 +125,7 @@ function App() {
         </button>
       </nav>
 
-      <div className='w-full px-16 '>
+    
         <TaskList
           tasks={filteredTasks()}
           onToggleComplete={toggleComplete}
@@ -133,7 +133,7 @@ function App() {
           onDelete={handleDelete}
           onToggleStar={toggleStar}
         />
-      </div>
+ 
 
       {isModalOpen && (
         <Modal onClose={() => setIsModalOpen(false)}>
