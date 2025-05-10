@@ -23,6 +23,17 @@ mongoose.connect(process.env.MONGODB_URI, {
 // Use tasks routes
 app.use('/api/tasks', tasksRouter);
 
+// Root route to confirm API is running
+app.get('/', (req, res) => {
+    res.json({ message: 'API is running' });
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ message: 'Internal Server Error' });
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
