@@ -125,13 +125,15 @@ function App() {
         </button>
       </nav>
 
-      <TaskList
-        tasks={filteredTasks()}
-        onToggleComplete={toggleComplete}
-        onEdit={startEdit}
-        onDelete={handleDelete}
-        onToggleStar={toggleStar}
-      />
+      <div className='w-full px-16 '>
+        <TaskList
+          tasks={filteredTasks()}
+          onToggleComplete={toggleComplete}
+          onEdit={startEdit}
+          onDelete={handleDelete}
+          onToggleStar={toggleStar}
+        />
+      </div>
 
       {isModalOpen && (
         <Modal onClose={() => setIsModalOpen(false)}>
