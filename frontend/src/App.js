@@ -111,7 +111,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-background p-6 max-w-full  font-mono">
+    <div className="min-h-screen bg-background p-6 max-w-full">
       <nav className="mb-6  pb-4 flex items-center justify-between bg-[#18181b] px-6 py-4 rounded-md shadow-md">
         <h1 className="text-4xl font-extrabold text-white  tracking-wide">To-Do App</h1>
         <button
