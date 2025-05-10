@@ -17,7 +17,7 @@ export default function TaskItem({ task, onToggleComplete, onEdit, onDelete, onT
     };
 
     return (
-        <li className={` bg-[#202022] w-4/6 mb-3 p-4 rounded-lg shadow-md flex flex-col bg-card min-h-[80px] ${task.completed ? 'opacity-60' : ''}`}>
+        <li className={` bg-[#202022]  mb-3 py-6 px-6 rounded-lg shadow-md flex flex-col bg-card min-h-[80px] ${task.completed ? 'opacity-60' : ''}`}>
             <div className="flex flex-col sm:flex-row justify-between items-start mb-3">
                 <h3 className={`text-m/6 font-medium  break-words w-full sm:w-3/4 mb-2 sm:mb-0 ${starred ? 'text-accent' : 'text-foreground'}`}>
                     {task.task}
