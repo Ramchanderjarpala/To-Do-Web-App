@@ -1,8 +1,8 @@
 import React from 'react';
-import { RiCheckLine, RiEditLine, RiDeleteBinLine, RiStarLine, RiStarFill } from 'react-icons/ri';
+import { RiCheckLine, RiEditLine, RiDeleteBinLine, RiStarLine, RiStarFill, RiLoginBoxFill } from 'react-icons/ri';
 
 export default function TaskItem({ task, onToggleComplete, onEdit, onDelete, onToggleStar }) {
-  const [starred, setStarred] = React.useState(task.starred || false);
+    const [starred, setStarred] = React.useState(task.starred || false);
 
     React.useEffect(() => {
         setStarred(task.starred || false);
@@ -51,7 +51,7 @@ export default function TaskItem({ task, onToggleComplete, onEdit, onDelete, onT
                     </button>
                 </div>
             </div>
-            <div className="flex justify-between text-xs text-muted">
+            <div className="flex justify-between text-sm text-muted">
                 <span className={`font-semibold px-2 py-1 rounded-md cursor-default select-none ${task.priority === 'high' ? 'text-red-400 bg-red-900/30 hover:bg-red-900/50' :
                     task.priority === 'medium' ? 'text-yellow-400 bg-yellow-900/30 hover:bg-yellow-900/50' :
                         task.priority === 'low' ? 'text-green-400 bg-green-900/30 hover:bg-green-900/50' :
